@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-// components
+// Components
 import Header from './components/ui/Header'
 import Search from './components/ui/Search'
 import CharacterGrid from './components/characters/CharacterGrid'
@@ -15,9 +15,9 @@ const App = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const result = await axios(`https://www.breakingbadapi.com/api/characters?name=${query}`)
+      const { data } = await axios(`${REACT_APP_API}?name=${query}`)
 
-      setItems(result.data)
+      setItems(data)
       setIsLoading(false)
     }
 
