@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 // Components
-import Header from './components/ui/Header'
-import Search from './components/ui/Search'
-import CharacterGrid from './components/characters/CharacterGrid'
+import { Header, Search, CharacterGrid } from './components'
 
 import './App.css'
 
