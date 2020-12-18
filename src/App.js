@@ -15,7 +15,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const { data } = await axios(`${REACT_APP_API}?name=${query}`)
+      const { data } = await axios(`${process.env.REACT_APP_API}?name=${query}`)
 
       setItems(data)
       setIsLoading(false)
